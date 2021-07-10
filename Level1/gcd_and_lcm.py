@@ -12,3 +12,15 @@ def gcd(n1, n2):
 
 def solution(n, m):
     return [gcd(n, m), (n * m) / gcd(n,m)]
+
+
+# 다른 풀이
+def gcdlcm(a, b):
+    c, d = max(a, b), min(a, b)
+    t = 1
+    while t > 0:
+        t = c % d
+        c, d = d, t
+    answer = [c, int(a*b/c)]
+
+    return answer
