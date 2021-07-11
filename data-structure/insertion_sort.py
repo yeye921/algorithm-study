@@ -13,4 +13,4 @@ def insertion_sort(arr):
 
 array = [7,5,9,0,3,1,6,2,4,8]
 insertion_sort(array)
-print(array)
+print(array)    
