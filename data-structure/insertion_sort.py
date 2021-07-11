@@ -1,12 +1,13 @@
-# ë°ì´í„°ë¥¼ í•˜ë‚˜ì”© í™•ì¸í•˜ë©° ê° ë°ì´í„°ë¥¼ ì ì ˆí•œ ìœ„ì¹˜ì— ì‚½ìž…í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜ 
-# ë°ì´í„°ê°€ ê±°ì˜ ì •ë ¬ë˜ì–´ ìžˆì„ ë•Œ ë§¤ìš° ë¹ ë¥´ê²Œ ë™ìž‘
+# µ¥ÀÌÅÍ¸¦ ÇÏ³ª¾¿ È®ÀÎÇÏ¸ç °¢ µ¥ÀÌÅÍ¸¦ ÀûÀýÇÑ À§Ä¡¿¡ »ðÀÔÇÏ´Â ¾Ë°í¸®Áò 
+# µ¥ÀÌÅÍ°¡ °ÅÀÇ Á¤·ÄµÇ¾î ÀÖÀ» ¶§ ¸Å¿ì ºü¸£°Ô µ¿ÀÛ
+
 
 def insertion_sort(arr):
     for i in range(1,len(arr)):
-        for j in range(i,0,-1):  # i~1ê¹Œì§€ ê°ì†Œí•˜ë©° ë°˜ë³µ 
-            if arr[j] < arr[j-1]: # í•œ ì¹¸ì”© ì™¼ìª½ìœ¼ë¡œ ì´ë™ 
+        for j in range(i,0,-1):  # i~1±îÁö °¨¼ÒÇÏ¸ç ¹Ýº¹ 
+            if arr[j] < arr[j-1]: # ÇÑ Ä­¾¿ ¿ÞÂÊÀ¸·Î ÀÌµ¿ 
                 arr[j],arr[j-1] = arr[j-1], arr[j]
-            else:        # ìžì‹ ë³´ë‹¤ ìž‘ì€ ë°ì´í„°ë¥¼ ë§Œë‚˜ë©´ ê·¸ ìœ„ì¹˜ì—ì„œ ë©ˆì¶¤ 
+            else:        # ÀÚ½Åº¸´Ù ÀÛÀº µ¥ÀÌÅÍ¸¦ ¸¸³ª¸é ±× À§Ä¡¿¡¼­ ¸ØÃã 
                 break
 
 
