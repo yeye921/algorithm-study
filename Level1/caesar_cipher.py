@@ -1,29 +1,54 @@
 # 나의 풀이 (틀림) 
 # 문자열을 리스트로 변환 후 일 수행한 다음 join이용하여 다시 문자열로 변환하는 방식
-
+# 리스트 원소를 탐색하면서 0이 나올때마다 이전 것을 처리하는 방식으로 함
 def solution(s, n): 
-    lower_list = "abcdefghijklmnopqrstuvwxyz"
-    upper_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lower_list = "abcdefghijklmnopqrstuvwxyz" 
+    upper_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
     
     # 1. 배열을 직접 수정하는 방식  2. 새배열에 append하는 방식 3.새 문자열에 +하는 방식
-    s = list(s)
-    l_s = len(s)
-    ans = [0] * l_s
+    
+    # split을 이용해서 리스트에 저장하는 방식 이용
+    # 나중에 join이용해서 문자열로 바꿀 때 공백으로 연결
+    s = s.split()
     print(s)
-    for i in range(l_s):
-        l = len(s[i])
-        if s[i] in lower_list:
+    
+    for i in range(len(s)):
+        print(s[i])
+        l_s = len(s[i])
+        if s[i].islower() ==  True:
             idx = lower_list.find(s[i][0])
-            print(idx)
-        elif s[i] in upper_list:
-            print(s[i])
-            print(s[i][0])
+            s[i] = lower_list[(idx + n) % 26: (idx + n + l_s) % 26]
+            # 문제가 되는 부분 [25:3] or [3:28(2)]일 경우 자르기가 힘들어짐... 그럼 어떻게 하지??
+            # [2:29]일 경우도 [2:3]으로 변환되어 문제 발생함
+            # 다른 방식 사용해야될 듯 
+
+        elif s[i].isupper() == True:
             idx = upper_list.find(s[i][0])
-            print(idx)
-        else: # 공백일 경우
-            ans[i] = ' '
+            s[i] = upper_list[(idx + n) % 26: (idx + n + l_s) % 26]
+    
+       
+
+    s = " ".join(s)
+    return s
+    
             
-                    
+            
+            
+        
+    
+    
+            
+            
+
+    
+ 
+    
+            
+            
+            
+        
+    
+                   
     
     
             
