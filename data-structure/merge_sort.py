@@ -28,4 +28,4 @@ def merge(left,right):
         elif len(right) > 0:
             arr.append(right[0])
             right = right[1:]
-    return arr
+    return arr 

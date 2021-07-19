@@ -19,4 +19,3 @@ def shell_sort(arr):
  
 arr = [8, 1, 4, 2, 7, 6, 3, 5]
 shell_sort(arr)
-

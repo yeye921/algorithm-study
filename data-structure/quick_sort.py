@@ -47,5 +47,3 @@ def quick_sort(array):
     return quick_sort(left_side) + [pivot] + quick_sort[right_side]
 
 print(quick_sort(array))
-    
-    
