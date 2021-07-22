@@ -20,4 +20,12 @@ def binary(l):
     r = r[::-1]
     return r
         
-    
+# 더 나은 풀이
+def solution(s):
+    a, b = 0, 0
+    while s != '1':
+        a += 1
+        num = s.count('1')
+        b += len(s) - num
+        s = bin(num)[2:]
+    return [a, b]
