@@ -13,5 +13,5 @@ def solution(numbers):
              binary_num[one_idx + 1] = "0" 
          ans_num = int("".join(binary_num), 2) 
          answer.append(ans_num) 
-     return answer
+     return answer 
 
