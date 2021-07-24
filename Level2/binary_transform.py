@@ -25,7 +25,7 @@ def solution(s):
     a, b = 0, 0
     while s != '1':
         a += 1
-        num = s.count('1')
-        b += len(s) - num
-        s = bin(num)[2:]
+        num = s.count('1') # 0 제거 후 길이 == 1의 개수
+        b += len(s) - num  # 제거할 0의 개수
+        s = bin(num)[2:] # 10진수 -> 2진수 문자열 변환
     return [a, b]
