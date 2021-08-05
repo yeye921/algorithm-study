@@ -43,7 +43,3 @@ def solution(skill,skill_trees):
         if skill_list == skill[0:len(skill_list)]:  # 포인트!
             ans += 1
     return ans
-
-
-    
-    
