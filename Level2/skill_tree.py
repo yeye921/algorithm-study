@@ -24,7 +24,7 @@ def solution(skill,skill_trees):
         skill_list = list(skill)
 
         for s in skills:
-            if s in skill:
+            if s in skill: # skill에 들어있는 원소들에 대해 순서체크
                 if s != skill_list.pop(0): # 포인트!
                     break
         else:
@@ -39,7 +39,7 @@ def solution(skill,skill_trees):
         skill_list = ''
         for j in i:
             if j in skill:
-                skill_list += j
-        if skill_list == skill[0:len(skill_list)]:  # 포인트!
+                skill_list += j # 내 풀이처럼 i에서 skill에 들어있는 문자만 문자열에 뽑아냄
+        if skill_list == skill[0:len(skill_list)]:  # 포인트!, skill과 같은 순서인지 확인
             ans += 1
     return ans
