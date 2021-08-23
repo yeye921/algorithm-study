@@ -1,3 +1,4 @@
+# 상하좌우 문제
 # 내 풀이
 n = int(input())
 str = input().split()
