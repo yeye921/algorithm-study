@@ -70,4 +70,5 @@ class BinarySearchTree(Node):
         else:
             node.right, deleted = self._delete_value(node.right, key)
         return node, deleted
+        
 
