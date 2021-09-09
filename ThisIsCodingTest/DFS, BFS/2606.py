@@ -37,11 +37,12 @@ def bfs(v):
                 visited[i] = True  # 포인트 - 2
 
 
-    
-
-
-
-
-#dfs(1) 
 bfs(1)
+print(cnt) # bfs 수행했을 때 결과
+
+# 초기화
+cnt = 0
+visited = [False] * (n+1)
+
+dfs(1) # dfs 수행했을 때 결과
 print(cnt) # 1번 컴퓨터가 웜 바이러스에 걸렸을 때, 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수
